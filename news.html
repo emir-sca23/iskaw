@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Новости - ISKA Кыргызская Республика</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="header-logo">
+                    <img src="./ISKA_kyrgyz_republic-removebg-preview.png" alt="ISKA Kyrgyz Republic" class="logo">
+                </div>
+                <div class="burger" onclick="toggleMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="index.html#about">О нас</a></li>
+                        <li><a href="leadership.html">Руководство</a></li>
+                        <li><a href="coaches.html">Тренеры</a></li>
+                        <li><a href="news.html" class="active">Новости</a></li>
+                        <li><a href="rules.html">Правила</a></li>
+                        <li><a href="disciplines.html">Дисциплины</a></li>
+                        <li><a href="index.html#contacts">Контакты</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- All News Page -->
+    <section class="all-news-page">
+        <div class="container">
+            <h1 class="page-title">Все новости</h1>
+            
+            <!-- Django: {% for news in all_news %} -->
+            <div class="news-grid">
+                <!-- News 1 -->
+                <div class="news-card">
+                    <!-- Django: <img src="{{ news.image.url }}" alt="{{ news.title }}"> -->
+                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/5440868947600735594-upXMR4UB8Q7tJ2zE6MRa2dD5LBGesO.jpg" alt="Победа на U.S. OPEN">
+                    <div class="news-card-content">
+                        <!-- Django: <h3>{{ news.title }}</h3> -->
+                        <h3>Победа на U.S. OPEN World Martial Arts Championships</h3>
+                        <!-- Django: <p class="news-date">{{ news.date|date:"d F Y" }}</p> -->
+                        <p class="news-date">17-19 июля 2025</p>
+                        <!-- Django: <p>{{ news.excerpt }}</p> -->
+                        <p>Команда ISKA Кыргызской Республики одержала убедительную победу на престижном международном турнире U.S. OPEN World Martial Arts Championships, завоевав первое место...</p>
+                        <!-- Django: <a href="{% url 'news_detail' news.id %}" class="btn">Подробнее</a> -->
+                        <a href="news1.html" class="btn">Подробнее</a>
+                    </div>
+                </div>
+
+                <!-- News 2 -->
+                <div class="news-card">
+                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/5440868947600735595-2g7MhoSjoWqKK5Fnu8zkvTcsKLMEa7.jpg" alt="Региональный чемпионат">
+                    <div class="news-card-content">
+                        <h3>Успешное выступление молодых спортсменов</h3>
+                        <p class="news-date">Май 2025</p>
+                        <p>Юные бойцы федерации ISKA Кыргызстан показали отличные результаты на региональном чемпионате. Более 30 медалей различного достоинства были завоеваны нашими спортсменами...</p>
+                        <a href="news2.html" class="btn">Подробнее</a>
+                    </div>
+                </div>
+
+                <!-- News 3 -->
+                <div class="news-card">
+                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/5440868947600735596-EOi4ags7rHKO5xyHrpBZm6JEJVt3aa.jpg" alt="USA Sport Karate">
+                    <div class="news-card-content">
+                        <h3>Международный турнир USA Sport Karate</h3>
+                        <p class="news-date">Апрель 2025</p>
+                        <p>Команда Кыргызстана достойно представила страну на международном турнире USA Sport Karate. Наши спортсмены продемонстрировали высокий уровень подготовки и боевой дух...</p>
+                        <a href="news3.html" class="btn">Подробнее</a>
+                    </div>
+                </div>
+
+                <!-- <div class="news-card">
+                    <img src="/placeholder.svg?height=280&width=400" alt="Открытие новой секции">
+                    <div class="news-card-content">
+                        <h3>Открытие новой тренировочной секции в Бишкеке</h3>
+                        <p class="news-date">Март 2025</p>
+                        <p>Федерация ISKA Кыргызской Республики открыла новую современную тренировочную секцию в центре Бишкека. Зал оборудован профессиональным инвентарем и соответствует всем международным стандартам...</p>
+                        <a href="news4.html" class="btn">Подробнее</a>
+                    </div>
+                </div>
+
+                <div class="news-card">
+                    <img src="/placeholder.svg?height=280&width=400" alt="Международный семинар">
+                    <div class="news-card-content">
+                        <h3>Международный семинар по кикбоксингу</h3>
+                        <p class="news-date">Февраль 2025</p>
+                        <p>В Бишкеке прошел международный семинар с участием ведущих тренеров ISKA из Южной Кореи и США. Более 50 тренеров и спортсменов повысили свою квалификацию и получили новые сертификаты...</p>
+                        <a href="news5.html" class="btn">Подробнее</a>
+                    </div>
+                </div>
+
+                <div class="news-card">
+                    <img src="/placeholder.svg?height=280&width=400" alt="Юношеский чемпионат">
+                    <div class="news-card-content">
+                        <h3>Юношеский чемпионат Кыргызстана по кикбоксингу</h3>
+                        <p class="news-date">Январь 2025</p>
+                        <p>Успешно завершился юношеский чемпионат Кыргызстана по кикбоксингу ISKA. В соревнованиях приняли участие более 120 юных спортсменов из всех регионов страны. Высокий уровень подготовки участников порадовал судей и зрителей...</p>
+                        <a href="news6.html" class="btn">Подробнее</a>
+                    </div>
+                </div> -->
+            </div>
+            <!-- Django: {% endfor %} -->
+
+            <a href="index.html" class="btn">Вернуться на главную</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-logos-section">
+            <div class="container">
+                <div class="footer-logos">
+                    <img src="./world ISKA.jpg" alt="ISKA International" class="footer-logo">
+                    <img src="./IMG_1260.JPG" alt="ISKA Kyrgyz Republic" class="footer-logo">
+                    <img src="./ISKA kyrgyz republic.jpg" alt="ISKA Kyrgyz Republic" class="footer-logo">
+                       <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/png-klev-club-3j0e-p-gerb-kirgizstana-png-1-tBWNgk62dWJtU5lz1faFAvf4ANMa9U.png" alt="Герб КР" class="footer-logo">
+                    <img src="./Flag_of_Kyrgyzstan.svg.png" alt="ISKA International" class="footer-logo">
+                </div>
+            </div>
+        </div>
+        <div class="footer-dark-section">
+            <div class="container">
+                <div class="footer-social">
+                    <a href="https://facebook.com/iska.kyrgyzstan" target="_blank" class="social-link">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                        </svg>
+                    </a>
+                    <a href="https://instagram.com/iska.kyrgyzstan" target="_blank" class="social-link">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-4.358-.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.849 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.059 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.947 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                        </svg>
+                    </a>
+                </div>
+                <p class="footer-text">Федерация ISKA Кыргызской Республики, 2025</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

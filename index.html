@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ISKA Кыргызская Республика</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+    <div class="container">
+        <div class="header-content">
+            <div class="header-logo">
+                <img src="./ISKA_kyrgyz_republic-removebg-preview.png" alt="ISKA Kyrgyz Republic" class="logo">
+            </div>
+            <div class="burger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="active">Главная</a></li>
+                    <li><a href="#about">О нас</a></li>
+                    <li><a href="leadership.html">Руководство</a></li>
+                    <li><a href="coaches.html">Тренеры</a></li>
+                    <li><a href="news.html">Новости</a></li>
+                    <li><a href="rules.html">Правила</a></li>
+                    <li><a href="disciplines.html">Дисциплины</a></li>
+                    <li><a href="#contacts">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    </header>
+
+
+    <!-- Hero Slider -->
+    <section class="hero-slider">
+        <div class="slider-container">
+            <div class="slide active">
+                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/5440868947600735594-upXMR4UB8Q7tJ2zE6MRa2dD5LBGesO.jpg" alt="Новость 1">
+                <div class="slide-content">
+                    <h2>Победа на U.S. OPEN World Martial Arts Championships</h2>
+                    <p>Команда ISKA Кыргызской Республики одержала убедительную победу на престижном международном турнире U.S. OPEN World Martial Arts Championships.</p>
+                    <a href="news1.html" class="btn">Подробнее</a>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/5440868947600735595-2g7MhoSjoWqKK5Fnu8zkvTcsKLMEa7.jpg" alt="Новость 2">
+                <div class="slide-content">
+                    <h2>Успешное выступление молодых спортсменов</h2>
+                    <p>Юные бойцы ISKA Кыргызской Республики показали отличные результаты на международном чемпионате.</p>
+                    <a href="news2.html" class="btn">Подробнее</a>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/5440868947600735596-EOi4ags7rHKO5xyHrpBZm6JEJVt3aa.jpg" alt="Новость 3">
+                <div class="slide-content">
+                    <h2>Международный турнир USA Sport Karate</h2>
+                    <p>Команда Кыргызской Республики достойно представила страну на международной арене.</p>
+                    <a href="news3.html" class="btn">Подробнее</a>
+                </div>
+            </div>
+        </div>
+        <button class="slider-btn prev" onclick="changeSlide(-1)">&#10094;</button>
+        <button class="slider-btn next" onclick="changeSlide(1)">&#10095;</button>
+        <div class="slider-dots">
+            <span class="dot active" onclick="currentSlide(0)"></span>
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+        </div>
+    </section>
+
+    <!-- News Section -->
+    <section class="news-section">
+        <div class="container">
+            <h2 class="section-title">Последние новости</h2>
+            <div class="news-grid">
+                <div class="news-card">
+                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/5440868947600735594-upXMR4UB8Q7tJ2zE6MRa2dD5LBGesO.jpg" alt="Победа на U.S. OPEN">
+                    <div class="news-card-content">
+                        <h3>Победа на U.S. OPEN World Martial Arts Championships</h3>
+                        <p class="news-date">17-19 июля 2025г.</p>
+                        <p>Команда ISKA Кыргызской Республики одержала убедительную победу на престижном международном турнире U.S. OPEN World Martial Arts Championships, который проходил с 17 по 19 июля 2025 года.</p>
+                        <a href="news1.html" class="btn">Подробнее</a>
+                    </div>
+                </div>
+                <div class="news-card">
+                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/5440868947600735595-2g7MhoSjoWqKK5Fnu8zkvTcsKLMEa7.jpg" alt="Региональный чемпионат">
+                    <div class="news-card-content">
+                        <h3>Успешное выступление молодых спортсменов</h3>
+                        <p class="news-date">Июнь 2025г.</p>
+                        <p>Юные бойцы федерации кикбоксинга ISKA Кыргызской Республики показали отличные результаты на региональном чемпионате. Более 30 медалей различного достоинства были завоеваны нашими спортсменами...</p>
+                        <a href="news2.html" class="btn">Подробнее</a>
+                    </div>
+                </div>
+                <div class="news-card">
+                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/5440868947600735596-EOi4ags7rHKO5xyHrpBZm6JEJVt3aa.jpg" alt="USA Sport Karate">
+                    <div class="news-card-content">
+                        <h3>Международный турнир USA Sport Karate</h3>
+                        <p class="news-date">Июнь 2024г.</p>
+                        <p>Команда Кыргызской Республики достойно представила страну на международном турнире USA Sport Karate. Наши спортсмены продемонстрировали высокий уровень подготовки и боевой дух...</p>
+                        <a href="news3.html" class="btn">Подробнее</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Section -->
+    <section class="video-section">
+        <div class="container">
+            <h2 class="section-title">Видео</h2>
+            <div class="video-grid">
+                <div class="video-card">
+                    <div class="video-wrapper">
+                        <!-- Using youtube-nocookie.com and simplified iframe to fix error 153 -->
+                        <iframe 
+                            src="https://www.youtube-nocookie.com/embed/ZPjWJKA9Nzo" 
+                            title="Федерация ISKA Кыргызской Республики" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                    <div class="video-card-content">
+                        <h3>Федерация кикбоксинга ISKA Кыргызской Республики</h3>
+                        <p>Официальная презентация федерации кикбоксинга ISKA Кыргызской Республики 22.05.2025г.</p>
+                        <a href="https://youtu.be/ZPjWJKA9Nzo" target="_blank" class="btn">Подробнее</a>
+                    </div>
+                </div>
+                <div class="video-card">
+                    <div class="video-wrapper">
+                        <!-- Using youtube-nocookie.com and simplified iframe to fix error 153 -->
+                        <iframe 
+                            src="https://www.youtube-nocookie.com/embed/_z8CufyPaT0" 
+                            title="Федерация ISKA Кыргызской Республики" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                    <div class="video-card-content">
+                        <h3>Федерация кикбоксинга ISKA Кыргызской Республики</h3>
+                        <p>Состоялся официальный запуск Федерации кикбоксинга ISKA в КР!</p>
+                        <a href="https://youtu.be/_z8CufyPaT0" target="_blank" class="btn">Подробнее</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2 class="section-title">О нас</h2>
+            <div class="about-content">
+                <p>Федерация кикбоксинга ISKA Кыргызской Республики была основана <strong>14 апреля 2025 года</strong>. Официальная презентация была проведена <strong>22 мая 2025 года</strong> в г. Бишкек. Мы являемся официальным представителем Международной Спортивной Ассоциации Кикбоксинга (ISKA) в Кыргызской Республики.</p>
+                <p>Наша миссия — развитие и популяризация кикбоксинга в стране, подготовка спортсменов международного уровня, а также формирование здорового и сильного поколения, приверженного спортивным ценностям и честной конкуренции.</p>
+                <p>International Sport Kickboxing Association (ISKA) — это одна из крупнейших и наиболее авторитетных организаций в мире боевых искусств, основанная в <strong>1986 году</strong>. Сегодня ISKA объединяет национальные федерации более чем из 100 стран мира и осуществляет регулирование и развитие кикбоксинга, ММА и других дисциплин боевых искусств на профессиональном и любительском уровнях.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- President Section -->
+    <section class="president-section">
+        <div class="container">
+            <h2 class="section-title">Президент и основатель</h2>
+            <!-- Added photo on left, info on right layout -->
+            <div class="president-content">
+                <div class="president-photo">
+                    <img src="./presidents/director2.png" alt="Майрамбек Дуйшеев">
+                </div>
+                <div class="president-info">
+                    <h3>Майрамбек Дуйшеев</h3>
+                    <p class="president-title">Президент и основатель федерации кикбоксинга ISKA Кыргызской Республики</p>
+                    <p>Майрамбек Дуйшеев — опытный тренер и организатор, посвятивший себя развитию кикбоксинга и боевых искусств в Кыргызской Республики. Под его руководством Федерация кикбоксинга ISKA Кыргызской Республики вышла на национальный уровень и начала уверенно представлять страну на международной арене. Благодаря его профессионализму и целеустремлённости, кыргызские спортсмены добиваются успехов на международных турнирах, демонстрируя высокий уровень подготовки и спортивные ценности.</p>
+                    <p>Под руководством Майрамбека Дуйшеева Федерация кикбоксинга ISKA Кыргызской Республики активно развивает международное сотрудничество и укрепляет позиции Кыргызстана в мировом сообществе боевых искусств. Несмотря на недавнее открытие Федерация кикбоксинга ISKA Кыргызской Республики в стране, уже достигнуты первые результаты, а спортсмены достойно представляют Кыргызской Республики на мировой арене.</p>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacts Section -->
+    <section id="contacts" class="contacts-section">
+        <div class="container">
+            <h2 class="section-title">Контакты</h2>
+            <div class="contacts-content">
+                <div class="contact-info">
+    <h3>Связаться с нами</h3>
+
+    <!-- Телефон -->
+    <p class="contact-item">
+        <a href="tel:+996702086086" class="contact-icon" title="Позвонить">
+            <svg class="contact-icon-svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56-.35-.12-.74-.03-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z"/>
+            </svg>
+        </a>
+        <span><strong>Телефон:</strong> +996 (702) 086 086</span>
+    </p>
+
+    <!-- Email -->
+    <p class="contact-item">
+        <a href="mailto:iska.kyrgyzstan@gmail.com" class="contact-icon" title="Написать email">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+            </svg>
+        </a>
+        <span><strong>Email:</strong>iska.kyrgyzstan@gmail.com</span>
+    </p>
+
+    <!-- Адрес -->
+    <p class="contact-item">
+        <a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2924.3101454482185!2d74.6062996759587!3d42.86629757115042!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x389eb7ce9a0903cd%3A0x2b132c04bf5a031b!2s173%20Tynystanov%20St%2C%20Bishkek%20720000!5e0!3m2!1sen!2skg!4v1761560150323!5m2!1sen!2skg" 
+           target="_blank" 
+           class="contact-icon" 
+           title="Открыть на карте">
+            <svg class="contact-icon-svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z"/>
+            </svg>
+        </a>
+        <span><strong>Адрес:</strong> г. Бишкек, Кыргызская Республика</span>
+    </p>
+</div>
+
+
+
+                <div class="contact-map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2924.3101454482185!2d74.6062996759587!3d42.86629757115042!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x389eb7ce9a0903cd%3A0x2b132c04bf5a031b!2s173%20Tynystanov%20St%2C%20Bishkek%20720000!5e0!3m2!1sen!2skg!4v1761560150323!5m2!1sen!2skg" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <footer>
+        <div class="footer-logos-section">
+            <div class="container">
+                <div class="footer-logos">
+                    <img src="./world ISKA.jpg" alt="ISKA International" class="footer-logo">
+                    <img src="./IMG_1260.JPG" alt="ISKA Kyrgyz Republic" class="footer-logo">
+                    <img src="./ISKA kyrgyz republic.jpg" alt="ISKA Kyrgyz Republic" class="footer-logo">
+                       <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/png-klev-club-3j0e-p-gerb-kirgizstana-png-1-tBWNgk62dWJtU5lz1faFAvf4ANMa9U.png" alt="Герб КР" class="footer-logo">
+                    <img src="./Flag_of_Kyrgyzstan.svg.png" alt="ISKA International" class="footer-logo">
+                </div>
+            </div>
+        </div>
+        <div class="footer-dark-section">
+            <div class="container">
+                <div class="footer-social">
+                    <a href="https://facebook.com/iska.kyrgyzstan" target="_blank" class="social-link">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                        </svg>
+                    </a>
+                    <a href="https://instagram.com/iska.kyrgyzstan" target="_blank" class="social-link">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-4.358-.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.849 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.059 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.947 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79 4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                        </svg>
+                    </a>
+                </div>
+                <p class="footer-text">Федерация ISKA Кыргызской Республики, 2025</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
