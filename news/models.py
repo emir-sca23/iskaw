@@ -18,6 +18,8 @@ class News(models.Model):
     # PDF файлы
     pdf_file = models.FileField('PDF документ', upload_to='news_pdfs/', blank=True, null=True, 
                                 help_text='Загрузите PDF файл (например, программу мероприятия, положение и т.д.)')
+    pdf_title = models.CharField('Название PDF документа', max_length=200, blank=True,
+                                 help_text='Например: "Правила кикбоксинга" или "Программа турнира"')
     
     created_at = models.DateTimeField('Создано', auto_now_add=True)
     updated_at = models.DateTimeField('Обновлено', auto_now=True)

@@ -26,8 +26,8 @@ class NewsAdmin(admin.ModelAdmin):
             'classes': ('collapse',)
         }),
         ('Документы', {
-            'fields': ('pdf_file',),
-            'description': 'Загрузите PDF документ (положение, программу и т.д.)'
+            'fields': ('pdf_file', 'pdf_title'),
+            'description': 'Загрузите PDF документ и укажите его название'
         }),
     )
     

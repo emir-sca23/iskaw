@@ -4,7 +4,7 @@ from .models import News
 
 def index(request):
     """Главная страница с 3 последними новостями"""
-    latest_news = News.objects.filter(is_published=True)[:3]
+    latest_news = News.objects.filter(is_published=True).order_by('-date_start')[:3]
     return render(request, 'index.html', {
         'latest_news': latest_news
     })
