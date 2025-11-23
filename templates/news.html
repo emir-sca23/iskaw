@@ -1,0 +1,123 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Новости - ISKA Кыргызская Республика</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="header-logo">
+                    <img src="{% static 'ISKA_kyrgyz_republic-removebg-preview.png' %}" alt="ISKA Kyrgyz Republic"
+                        class="logo">
+                </div>
+                <div class="burger" onclick="toggleMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <nav>
+                    <ul class="nav-links">
+                        <li><a href="{% url 'index' %}">Главная</a></li>
+                        <li><a href="{% url 'index' %}#about">О нас</a></li>
+                        <li><a href="{% url 'leadership' %}">Руководство</a></li>
+                        <li><a href="{% url 'coaches' %}">Тренеры</a></li>
+                        <li><a href="{% url 'news_list' %}">Новости</a></li>
+                        <li><a href="{% url 'rules' %}">Правила</a></li>
+                        <li><a href="{% url 'disciplines' %}">Дисциплины</a></li>
+                        <li><a href="{% url 'index' %}#contacts">Контакты</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section class="all-news-page">
+        <div class="container">
+            <h1 class="page-title">Все новости</h1>
+
+            <div class="news-grid">
+                {% for news in all_news %}
+                <div class="news-card">
+                    <img src="{{ news.image.url }}" alt="{{ news.title }}">
+                    <div class="news-card-content">
+                        <h3>{{ news.title }}</h3>
+                        <p class="news-date">{{ news.get_date_display }}</p>
+                        <p>{{ news.excerpt }}</p>
+                        <a href="{% url 'news_detail' news.slug %}" class="btn">Подробнее</a>
+                    </div>
+                </div>
+                {% empty %}
+                <p style="text-align: center; font-size: 18px; color: #666; margin: 40px 0;">
+                    Новостей пока нет. Добавьте первую новость через <a href="/admin/"
+                        style="color: #c00; text-decoration: underline;">админ-панель</a>
+                </p>
+                {% endfor %}
+            </div>
+
+            {% if is_paginated %}
+            <div class="pagination">
+                {% if page_obj.has_previous %}
+                <a href="?page=1" class="btn">Первая</a>
+                <a href="?page={{ page_obj.previous_page_number }}" class="btn">Предыдущая</a>
+                {% endif %}
+
+                <span class="current-page">
+                    Страница {{ page_obj.number }} из {{ page_obj.paginator.num_pages }}
+                </span>
+
+                {% if page_obj.has_next %}
+                <a href="?page={{ page_obj.next_page_number }}" class="btn">Следующая</a>
+                <a href="?page={{ page_obj.paginator.num_pages }}" class="btn">Последняя</a>
+                {% endif %}
+            </div>
+            {% endif %}
+
+            <a href="{% url 'index' %}" class="btn">Вернуться на главную</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-logos-section">
+            <div class="container">
+                <div class="footer-logos">
+                    <img src="{% static 'world ISKA.jpg' %}" alt="ISKA International" class="footer-logo">
+                    <img src="{% static 'IMG_1260.JPG' %}" alt="ISKA Kyrgyz Republic" class="footer-logo">
+                    <img src="{% static 'ISKA kyrgyz republic.jpg' %}" alt="ISKA Kyrgyz Republic" class="footer-logo">
+                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/png-klev-club-3j0e-p-gerb-kirgizstana-png-1-tBWNgk62dWJtU5lz1faFAvf4ANMa9U.png"
+                        alt="Герб КР" class="footer-logo">
+                    <img src="{% static 'Flag_of_Kyrgyzstan.svg.png' %}" alt="ISKA International" class="footer-logo">
+                </div>
+            </div>
+        </div>
+        <div class="footer-dark-section">
+            <div class="container">
+                <div class="footer-social">
+                    <a href="https://facebook.com/iska.kyrgyzstan" target="_blank" class="social-link">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                        </svg>
+                    </a>
+                    <a href="https://instagram.com/iska.kyrgyzstan" target="_blank" class="social-link">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.228-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069L12 2.163zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.258-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0z" />
+                        </svg>
+                    </a>
+                </div>
+                <p class="footer-text">Федерация ISKA Кыргызской Республики, 2025</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="{% static 'script.js' %}"></script>
+</body>
+
+</html>
