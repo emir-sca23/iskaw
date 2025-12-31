@@ -1355,3 +1355,67 @@ footer {
     background: rgba(255, 255, 255, 1);
     transform: scale(1.2);
 }
+
+/* Исправление для мобильных устройств */
+@media (max-width: 768px) {
+  /* Убираем лишние отступы у текста */
+  body {
+    line-height: 1.5;
+  }
+  
+  p, h1, h2, h3, h4, h5, h6 {
+    word-spacing: normal !important;
+    letter-spacing: normal !important;
+  }
+  
+  /* Уменьшаем отступы между элементами */
+  .news-card-content p,
+  .video-card-content p,
+  .about-content p,
+  .president-info p,
+  .contact-info p,
+  .news-detail-content p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+  }
+  
+  /* Уменьшаем размеры заголовков */
+  .section-title {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+  }
+  
+  .news-card h3,
+  .video-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+  
+  /* Компактные карточки на мобильных */
+  .news-card-content,
+  .video-card-content {
+    padding: 20px;
+  }
+  
+  .news-card img {
+    height: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Еще более компактно для маленьких экранов */
+  .news-card-content,
+  .video-card-content {
+    padding: 15px;
+  }
+  
+  p {
+    font-size: 0.95rem;
+    margin-bottom: 10px;
+  }
+  
+  .btn {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+}

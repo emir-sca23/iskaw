@@ -18,7 +18,7 @@ SECRET_KEY = 'django-insecure-change-this-in-production-12345'
 
 DEBUG = False
 
-ALLOWED_HOSTS = ['iskakyrgyzstan.com', 'www.iskakyrgyzstan.com']
+ALLOWED_HOSTS = ['daniel2711.pythonanywhere.com','iskakyrgyzstan.com', 'www.iskakyrgyzstan.com']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
